@@ -1,0 +1,178 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Note-Taking App Design System - Modern productivity colors */
+
+@layer base {
+  :root {
+    /* App Background */
+    --background: 240 10% 97%;
+    --foreground: 240 15% 15%;
+
+    /* Cards & Surfaces */
+    --card: 0 0% 100%;
+    --card-foreground: 240 15% 15%;
+    --card-hover: 240 20% 98%;
+
+    /* Note-specific colors */
+    --note-background: 0 0% 100%;
+    --note-border: 240 15% 90%;
+    --note-shadow: 240 15% 15%;
+
+    /* Interactive elements */
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 15% 15%;
+
+    /* Primary - Productive Blue */
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 98%;
+    --primary-hover: 217 91% 55%;
+
+    /* Secondary - Soft Purple */
+    --secondary: 270 50% 94%;
+    --secondary-foreground: 270 15% 25%;
+
+    /* Muted elements */
+    --muted: 240 10% 95%;
+    --muted-foreground: 240 10% 45%;
+
+    /* Accent - Creative Purple */
+    --accent: 270 75% 60%;
+    --accent-foreground: 0 0% 98%;
+    --accent-hover: 270 75% 55%;
+
+    /* Status colors */
+    --success: 142 76% 45%;
+    --success-foreground: 0 0% 98%;
+    
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 98%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* Form elements */
+    --border: 240 15% 88%;
+    --input: 240 15% 95%;
+    --input-border: 240 15% 85%;
+    --ring: 217 91% 60%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark mode - Professional dark theme */
+    --background: 240 15% 8%;
+    --foreground: 240 10% 95%;
+
+    /* Cards & Surfaces */
+    --card: 240 15% 12%;
+    --card-foreground: 240 10% 95%;
+    --card-hover: 240 15% 15%;
+
+    /* Note-specific colors */
+    --note-background: 240 15% 12%;
+    --note-border: 240 15% 20%;
+    --note-shadow: 240 100% 3%;
+
+    /* Interactive elements */
+    --popover: 240 15% 12%;
+    --popover-foreground: 240 10% 95%;
+
+    /* Primary - Bright Blue */
+    --primary: 217 91% 65%;
+    --primary-foreground: 240 15% 8%;
+    --primary-hover: 217 91% 70%;
+
+    /* Secondary - Dark Purple */
+    --secondary: 240 15% 15%;
+    --secondary-foreground: 240 10% 90%;
+
+    /* Muted elements */
+    --muted: 240 15% 15%;
+    --muted-foreground: 240 10% 65%;
+
+    /* Accent - Bright Purple */
+    --accent: 270 75% 65%;
+    --accent-foreground: 240 15% 8%;
+    --accent-hover: 270 75% 70%;
+
+    /* Status colors */
+    --success: 142 76% 50%;
+    --success-foreground: 240 15% 8%;
+    
+    --warning: 38 92% 55%;
+    --warning-foreground: 240 15% 8%;
+    
+    --destructive: 0 84% 65%;
+    --destructive-foreground: 240 15% 8%;
+
+    /* Form elements */
+    --border: 240 15% 20%;
+    --input: 240 15% 15%;
+    --input-border: 240 15% 25%;
+    --ring: 217 91% 65%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+@layer utilities {
+  /* Text clamping utilities */
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  /* Smooth scrolling */
+  .scroll-smooth {
+    scroll-behavior: smooth;
+  }
+  
+  /* Custom transitions */
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
